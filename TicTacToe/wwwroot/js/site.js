@@ -36,11 +36,11 @@ function checkForWinner()
     }
 
     // Check for vertical cells
-    for (var j = 0; j < 9; j += 3)
+    for (var j = 0; j < 9; j++)
     {
         if (cells[0 + j].innerText && cells[0+j].innerText === cells[3 + j].innerText && cells[3 + j].innerText === cells[6 + j].innerText)
         {
-            setWinner(cells[j + i].innerText);
+            setWinner(cells[j + 0].innerText);
             return true;
         }
     }
