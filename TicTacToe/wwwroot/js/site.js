@@ -3,7 +3,7 @@
 
 // Write your Javascript code.
 
-var turn = "x";
+/*var turn = "x";
 
 function setTurn()
 {
@@ -88,3 +88,4 @@ for (var i = 0; i < cells.length; i++)
 }
 
 setTurn();
+*/
