@@ -2,7 +2,41 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your Javascript code.
+var dragging;
+var squares = document.getElementsByClassName("square");
+for (var i = 0; i < squares.length; i++) {
+    squares[i].addEventListener('dragenter', onDragEnter);
+    squares[i].addEventListener('dragleave', onDragLeave);
+    squares[i].addEventListener('dragstart', onDragStart);
+    squares[i].addEventListener('dragend', onDragEnd);
+    
+}
 
+function onDragEnter(event) {
+    if (event.target.children.length > 0) return;
+    if (event.target.classList.contains("checker")) return;
+    if (event.target.classList.contains("red")) return;
+    event.preventDefault();
+    event.target.style.backgroundColor = "yellow";
+}
+
+function onDragStarg(event) {
+    dragging = {
+        x: event.target.dataset.x,
+        y: event.target.dataset.y
+    }
+}
+
+function onDragEnd(event) {
+    console.log(dragging);
+    // do something...
+}
+
+function onDragLeave(event) {
+    event.target.style.backgroundColor = null;
+}
+
+// Tic Tac Toe Javascript code.
 /*var turn = "x";
 
 function setTurn()

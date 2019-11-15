@@ -1,12 +1,14 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
 for details on configuring this project to bundle and minify static web assets. */
+/*
 body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
-
+*/
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
+/*
 .body-content {
     width: 302px;
     margin: 0 auto;
@@ -50,4 +52,34 @@ body {
 .cell {
     width: 100px;
     height: 100px;
+}
+*/
+
+#board {
+    width: 400px;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+}
+
+#board > .square {
+    border: 1px solid gray;
+    width: 50px;
+    height: 50px;
+}
+
+#board > .red {
+    background-color: red;
+}
+
+#board > .black {
+    background-color: black;
+}
+
+.checker {
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    border: 5px solid gray;
 }
