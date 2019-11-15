@@ -68,11 +68,11 @@ body {
     height: 50px;
 }
 
-#board > .red {
+.red {
     background-color: red;
 }
 
-#board > .black {
+.black {
     background-color: black;
 }
 
